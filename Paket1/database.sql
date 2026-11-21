@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS klinikzakwan_paket1 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE klinikzakwan_paket1;
+CREATE TABLE IF NOT EXISTS pasien (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ nama VARCHAR(100) NOT NULL,
+ username VARCHAR(50) NOT NULL,
+ umur INT NOT NULL,
+ jenis_kelamin ENUM('Laki-laki','Perempuan') NOT NULL,
+ no_hp VARCHAR(20) NOT NULL,
+ foto VARCHAR(255) DEFAULT NULL,
+ keluhan TEXT DEFAULT NULL,
+ tanggal_masuk DATE DEFAULT NULL,
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
